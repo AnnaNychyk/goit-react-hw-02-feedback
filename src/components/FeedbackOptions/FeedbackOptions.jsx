@@ -1,9 +1,10 @@
 import PropTypes from 'prop-types';
+import styles from './FeedbackOptions.module.css';
 
 function FeedbackOptions({ options, onLeaveFeedback }) {
   return (
-      <div>
-          {options.map((option, index) => <button key={index} name={option} onClick={onLeaveFeedback}>{option}</button>)}
+      <div className={styles.btn}>
+          {options.map((option, index) => <button className={styles.btnItem} key={index} name={option} onClick={onLeaveFeedback}>{option}</button>)}
       </div>
   );
 }
